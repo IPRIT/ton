@@ -53,7 +53,7 @@ let balance: bigint = await contract.getBalance();
 
 // Create a transfer
 let seqno: number = await contract.getSeqno();
-let transfer = await contract.createTransfer({
+let transfer = await contract.sendTransfer({
   seqno,
   secretKey: keyPair.secretKey,
   messages: [internal({
